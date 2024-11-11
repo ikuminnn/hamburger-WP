@@ -1,0 +1,43 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.c-img {
+  &__ham-1 {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: 0 85%;
+    margin-top: 30px;
+    @include breakpoint(tablet) {
+      margin-top: 46px;
+      height: 250px;
+    }
+    @include breakpoint(pc) {
+      height: 440px;
+      margin-top: 50px;
+    }
+  }
+
+  &__ham-2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    img {
+      width: 88%;
+      height: 150px;
+      object-fit: cover;
+      object-position: 0 85%;
+      @include breakpoint(tablet) {
+        height: 300px;
+        width: 84%;
+      }
+      @include breakpoint(pc) {
+        width: 60%;
+        height: auto;
+      }
+    }
+    @include breakpoint(tablet) {
+      margin-top: 60px;
+    }
+  }
+}

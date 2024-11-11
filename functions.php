@@ -1,18 +1,35 @@
 <?php
 
 function custom_theme_support() {
-  add_theme_support( 'html5', array(    //
+  add_theme_support( 'html5', array(    //HTML5で出力できるように変更
     'search-form',
     'comment-form',
     'comment-list',
     'gallery',
     'caption',
   ));
+  add_theme_support( 'menus' );
+  add_theme_support( 'title-tag' );         // タイトルタグ
+  add_theme_support( 'post-thumbnails' );   //アイキャッチ機能
+  add_theme_support( 'menus' );             //カスタムメニュー
+  add_theme_support( 'editor-styles' );     //エディタスタイル
+  add_editor_style();
 }
-add_theme_support( 'menus' );
-add_theme_support( 'title-tag' );         // タイトルタグ
-add_theme_support( 'post-thumbnails' );   //アイキャッチ機能
-add_theme_support( 'menus' );             //カスタムメニュー
+add_action( 'after_setup_theme', 'custom_theme_support' );
+
+function ham_widgets_init() {     //ウィジェットの初期設定
+  register_sidebar ( array (      //ウィジェットのボックス一つ一つを定義する
+    'name'    =>  esc_html__( 'Category widget' ),
+    'id'      =>  'category_widget',
+    'description' =>  'widget for category',
+    'before_widget' =>  '',
+    'after_widget'  =>  '',
+    'before_title'  =>  '<h2><i class="fa-regular fa-folder-open" aria-hidden="true"></i>',
+    'after_title'   =>  "</h2>\n"
+  ) );
+}
+add_action( 'widget_init', 'ham_widgeta_init' );
+
 
 /* タイトル出力 ********************************/
 function ham_title ( $title ) {

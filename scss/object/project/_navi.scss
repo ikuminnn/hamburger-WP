@@ -1,0 +1,63 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-navi {
+  position: fixed;
+  right: -100%;
+/*　ハンバーガーボタンがクリックされる前はWindows右側に隠す*/
+  top: 0;
+  width: 87%;
+  /* 出てくるスライドメニューの幅*/
+  height: 100%;
+  background-color: $color-sidebar-bg;
+  transition: all 0.6s;
+  z-index: 200;
+  overflow-y: auto; /* メニューが多くなったらスクロールできるように*/
+  scrollbar-width: none;
+  @include breakpoint(tablet){
+    width: 44%;
+  }  
+  @include breakpoint(pc){
+    width: 100%;
+    position: static;
+  }
+
+  .l-nav.open & {
+    right: 0;
+  }
+  /*==== 背景黒、解除用========*/
+  
+  &__content {
+    padding-top: 130px;
+    @include breakpoint(pc){
+      padding: 0;
+    }
+  }
+
+  &-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 100;
+    @include breakpoint(pc){
+      display: none;
+    }
+  }
+  /* ハンバーガーメニューが開いたら表示*/
+  .open &-bg {
+    opacity: 0.8;
+    visibility: visible;
+  }
+  .open .js-menu {
+    display: block;
+  }
+}
+

@@ -1,0 +1,42 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.c-caption {
+  color: #fff;
+  padding: 0 17px;
+  @include breakpoint(tablet) {
+    padding: 0 59px 0 30px;
+  }
+  @include breakpoint(pc) {
+    padding: 0 100px 0 60px;
+  }
+  h3 {
+    padding-top: 15px;
+    font-size: 1.8rem;
+    @include breakpoint(tablet) {
+      padding-top: 28px;
+    }
+    @include breakpoint(pc) {
+      font-size: 3rem;
+      padding-top: 50px;
+    }
+  }
+  h4 {
+    padding-top: 6px;
+    font-size: 1.3rem;
+    @include breakpoint(tablet) {
+      padding-top: 14px;
+    }
+    @include breakpoint(pc) {
+      font-size: 2rem;
+      padding-top: 40px;
+    }
+  }
+  p:nth-child(3) {
+    padding-top: 2px;
+    font-size: 1.3rem;
+    @include breakpoint(tablet) {
+      padding-top: 6px;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.c-text {
+  &-archive {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 38px;
+    left: 42px;
+    font-weight: 700;
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+      top: 5px;
+      left: 240px;
+    }
+  }
+  &__theme {
+    h2 {
+      @include breakpoint(tablet) {
+        font-size: 3.1rem;
+      }
+    }
+    p {
+      padding: 25px 0 8px;
+      @include breakpoint(tablet) {
+        padding: 8px 0 20px;
+      }
+      @include breakpoint(pc) {
+        padding: 10px 0 0;
+      }
+    }
+  }
+
+  // Single page
+  &__single {
+    p {
+      font-size: 1.4rem;
+    }
+    h2 {
+      padding: 25px 0 15px;
+      @include breakpoint(tablet) {
+        font-size: 3.1rem;
+        padding: 52px 0 44px;
+      }
+    }
+    h3 {
+      padding: 14px 0 20px;
+      @include breakpoint(tablet) {
+        font-size: 2.4rem;
+      }
+      @include breakpoint(tablet) {
+        font-size: 2.6rem;
+        padding: 45px 0 40px;
+      } 
+    }
+    h4, h5, h6 {
+      font-size: 1.5rem;
+      padding-bottom: 25px;
+      @include breakpoint(tablet) {
+        font-size: 1.8rem;
+        padding-bottom: 50px;
+      }
+    }
+  }
+  &__bold {
+    font-weight: bold;
+    margin: 30px 20px 70px;
+    @include breakpoint(tablet) {
+      margin: 50px 50px 125px;
+    }
+    @include breakpoint(pc) {
+      margin-left: 90px;
+      margin-bottom: 240px;
+    }
+  }
+}

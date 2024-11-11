@@ -1,0 +1,12 @@
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
+
+.l-nav {
+  color: $color-font-70;
+  background-color: $color-sidebar-bg;
+  @include breakpoint(pc) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+
+}

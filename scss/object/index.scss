@@ -1,0 +1,31 @@
+
+// component
+@forward "./component/form";
+@forward "./component/section";
+@forward "./component/pagenav";
+@forward "./component/button";
+@forward "./component/title";
+@forward "./component/list";
+@forward "./component/text";
+@forward "./component/navi";
+@forward "./component/caption";
+@forward "./component/table";
+@forward "./component/inner";
+@forward "./component/quote";
+@forward "./component/img";
+@forward "./component/test";
+@forward "./component/grid";
+@forward "./component/code";
+
+// project
+@forward "./project/theme";
+@forward "./project/access";
+@forward "./project/pagenav";
+@forward "./project/navi";
+@forward "./project/footer";
+@forward "./project/list";
+
+// utility
+@forward "./utility/container";
+@forward "./utility/main";
+@forward "./utility/pagenav";

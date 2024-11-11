@@ -1,0 +1,23 @@
+@use "../../foundation/mixin" as *;
+
+.c-section {
+  display: flex;
+  flex: 1 0 50%;
+  height: auto;
+  position: relative;
+  a {
+    align-self: flex-end;
+  }
+  &:first-child {
+    margin-bottom: 20px;
+    @include breakpoint(tablet){
+      margin: 0;
+    }
+  }
+}
+.takeout_bg {
+  background: url(/img/takeout.jpg) center / cover;
+}
+.eatin_bg {
+  background: url(/img/eatin.jpg) center / cover;
+}

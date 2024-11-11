@@ -1,0 +1,10 @@
+@use "../../foundation/mixin" as *;
+
+.c-code {
+  background-color: #f5f5f5;
+  padding: 50px;
+  margin-top: 25px;
+  @include breakpoint(tablet) {
+    margin-top: 55px;
+  }
+}

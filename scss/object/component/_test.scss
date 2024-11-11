@@ -1,0 +1,28 @@
+@use "../../foundation/mixin" as *;
+
+.c-test {
+  margin-top: 20px;
+  column-gap: 10px;
+  display: flex;
+  @include breakpoint(tablet) {
+    margin-top: 42px;
+    column-gap: 16px;
+  }
+  @include breakpoint(pc) {
+    margin-top: 48px;
+    column-gap: 36px;
+  }  
+  &-02 {
+    margin-top: 45px;
+    @include breakpoint(tablet) {
+      margin-top: 98px;
+    }
+    @include breakpoint(pc) {
+      margin-top: 50px;
+    }
+  }
+  img {
+    height: 100%;
+    width: 43%;
+  }
+}

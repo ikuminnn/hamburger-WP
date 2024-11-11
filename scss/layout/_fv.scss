@@ -1,0 +1,51 @@
+@use "../foundation/mixin" as *;
+
+.l-fv {
+  color: #fff;
+  background: url(/img/saittitle.jpg) center/cover no-repeat; // Front　背景
+  width: 100%;
+  
+  // アーカイブページ
+  &__content {
+    position: relative;
+    height: 300px;
+    padding-left: 40px;
+    line-height: 300px;
+    @include breakpoint(tablet){
+      position: flex;
+      padding-left: 85px;
+    }
+    &::before {    // 黒のかぶせ
+      content: "";
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 0; right: 0;
+      background: black;
+      opacity: 0.5;
+    }
+    &-single {
+      height: 200px;
+      line-height: 200px;
+      @include breakpoint(tablet) {
+        height: 500px;
+        line-height: 500px;
+      }
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  // Archive 背景
+  &__bg {
+    background: url(/img/takeout.jpg) left 50%/cover no-repeat;
+  }
+  // Single page背景
+  &__single {
+    background: url(/img/single-ham.jpg) left 70%/cover no-repeat;
+  }
+  // About 背景
+  &__about {
+    background: url(/img/about-shop.jpg) left 50%/cover no-repeat;
+  }
+}

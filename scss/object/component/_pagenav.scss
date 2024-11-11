@@ -1,0 +1,63 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.c-pagenav__front {
+  display: block;
+  position: relative;
+  padding-left: 48px;
+  @include breakpoint(tablet) {
+    display: none;
+  }
+  & a::before {
+    content: "\0ab";
+    display: inline-block;
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    font-size: 2.7rem;
+  }
+}
+.c-pagenav__back {
+  display: block;
+  position: relative;
+  padding-right: 48px;
+  @include breakpoint(tablet) {
+    display: none;
+  }
+  & a::after {
+    content: "\0bb";
+    display: inline-block;
+    position: absolute;
+    top: -12px;
+    right: 30px;
+    font-size: 2.7rem;
+  }
+}
+.c-pagenav__list {  //1-9の数字ページ送り
+  display: none;
+  @include breakpoint(tablet) {
+    display: flex;
+    column-gap: 15px;
+    position: relative;
+    &-border {
+      border: solid 1.5px $color-font-70;
+      padding: 5px 10px;
+    }
+  }
+}
+.c-pagenav__prev:before {   //タブレット以上のページ送り前へ矢印<<
+  content: "\0ab";
+  display: inline-block;
+  position: absolute;
+  top: -11px;
+  left: -10px;
+  font-size: 2.7rem;  
+}
+.c-pagenav__next:after {  //タブレット以上のページ送り次へ矢印>>
+  content: "\0bb";
+  display: inline-block;
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  font-size: 2.7rem;
+}

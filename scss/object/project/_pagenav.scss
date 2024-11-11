@@ -1,0 +1,22 @@
+@use "../../foundation/mixin" as *;
+
+.p-pagenav {
+  padding: 30px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint(tablet) {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  @include breakpoint(pc) {
+    padding-bottom: 60px;
+  }
+  p {
+    display: none;
+    @include breakpoint(tablet) {
+      display: block;
+      padding-right: 30px;
+    }
+  }
+}

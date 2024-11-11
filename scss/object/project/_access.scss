@@ -1,0 +1,62 @@
+@use "../../foundation/mixin" as *;
+
+.access_bg {
+  background: url(/img/access.jpg) center / cover;
+}
+
+.p-access {
+  position: relative;
+  &__content {
+    display: block;
+    p {
+      color: #fff;
+      position: relative;
+      padding: 120px 40px 50px;
+      z-index: 3;
+      @include breakpoint(pc){
+        width: 55%;
+        padding-top: 250px;
+        padding-left: 120px;
+      }
+    }
+    h2::after {  //　タイトル下の線
+      content: "";
+      width: 75px;
+      height: 2px;
+      display: inline-block;
+      background-color: #fff;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      @include breakpoint(pc){
+        bottom: -50px;
+      }
+    }
+    // 地図に乗せる黒
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 0; right: 0;
+      background: black;
+      opacity: 0.5;
+    }
+    // 手前の黒
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background-color: rgba(0,0,0,.4);
+      z-index: 1;
+      @include breakpoint(tablet){
+        height: 100%;
+      }
+      @include breakpoint(pc){
+        width: 60%;
+      }
+    }
+  }
+}

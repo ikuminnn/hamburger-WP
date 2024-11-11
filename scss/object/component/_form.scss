@@ -1,0 +1,52 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+input {
+  height: 40px;
+  border: solid 1.2px $color-font-70;
+  border-radius: 8px;
+}
+
+.c-form {
+  &__mark {
+    display: flex;
+    width: 84.8%;
+    position: relative;     //虫眼鏡の基準値
+    @include breakpoint(tablet){
+      width: 65.5%;
+    }
+    @include breakpoint(pc) {
+      width: 35.1%;
+    }
+    // 虫眼鏡のマーク
+    &::before {
+      content: "";
+      width: 25px;            //アイコンの横幅
+      height: 25px;           //アイコンの高さ
+      background: url(/./img/icon.png) no-repeat center center / auto 100%; //背景にアイコン画像を設置
+      display: inline-block;  //高さを持たせるためにインラインブロック
+      position: absolute;     //親要素の相対位置に指定
+      top: 8px;               //アイコンの位置微調整
+      left: 6px;              //アイコンの位置微調整
+    }
+  }
+  &__keyword {
+    background-color: $color-white;
+    margin-right: 15px;
+    text-indent: 4rem;
+    width: 68%;
+    @include breakpoint(tablet){
+      width: 72.5%;
+    }
+  }
+  &__button {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: $color-font-70;
+    background: linear-gradient(-90deg, $color-sidebar-bg, #ded8d3);
+    width: 28.3%;
+    @include breakpoint(tablet){
+      width: 25%;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.c-table {
+  margin-top: 30px;
+  width: 100%;
+  @include breakpoint(tablet) {
+    margin-top: 50px;
+  }
+  &, td {
+    border: solid 1px $color-font-70;
+    border-collapse: collapse;
+  }
+  td {
+    padding: 25px 0 25px 30px;
+  }
+  tr td:first-child {
+    width: 43%;
+    @include breakpoint(tablet) {
+      width: 30%;
+    }
+  }
+}

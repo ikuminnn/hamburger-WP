@@ -1,0 +1,88 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.c-button {
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  color: $color-font-70;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 6px 10px 0 0;
+  z-index: 300;
+  @include breakpoint(tablet){
+    padding: 10px 10px 0 0;
+    font-size: 21px;
+  }
+  @include breakpoint(pc){
+    display: none;
+  }
+  // ボタンクリックにて変化
+  .open &-line {
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    top: 30px;
+    right: 15px;
+    background-color: $color-font-70;
+    transition: all 0.6s;
+  }
+  .open &-line1 {
+    transform: rotate(-45deg);
+    top: 30px;
+  }
+  .open &-line2 {
+    display: none;
+  }
+  .open &-line3 {
+    transform: rotate(45deg);
+    top: 30px;
+  }
+
+  &__menu {
+    display: block;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 20px;
+    background-color: #fff;
+    color: $color-font-70;
+    font-weight: 700;
+    font-size: 1.4rem;
+    @include breakpoint(tablet) {
+      margin: 30px auto 36px;
+    }
+    @include breakpoint(pc) {
+      margin: 55px auto;
+      width: 250px;
+      height: 70px;
+      line-height: 70px;
+      border-radius: 35px;
+    }
+  }
+
+  // Single page 一番下のボタン
+  &__single {
+    display: block;
+    margin: 60px auto 0;
+    height: 80px;
+    width: 100%;
+    border: solid 1px $color-font-70;
+    border-radius: 16px;
+    font-weight: 700;
+    background: linear-gradient(-190deg, $color-sidebar-bg, #ded8d3);
+    @include breakpoint(tablet) {
+      width: 400px;
+      height: 100px;
+      margin: 60px 0 0 0;
+    }
+  }
+}
+
+// ナビ開いている時（✖）のクリック範囲
+.open .c-button {
+  width: 65px;
+  height: 60px;
+}
