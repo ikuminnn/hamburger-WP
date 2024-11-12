@@ -36,7 +36,7 @@ add_action( 'after_setup_theme', 'custom_theme_support' );  //必要な機能を
 
 /* タイトル出力 ********************************/
 function ham_title ( $title ) {
-  if ( is_frongitt_page() && is_home() ) {   //トップページなら
+  if ( is_front_page() && is_home() ) {   //トップページなら
     $title = get_bloginfo( 'name', 'display' );
   } elseif ( is_singular() ) {   //シングルページなら
     $title = single_post_title( '', false );
