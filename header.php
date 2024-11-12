@@ -8,7 +8,7 @@
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png">
     <?php wp_head(); ?>
   </head>
-
+  
   <body <?php body_class(); ?> class="u-container">
     <header class="l-header">
       <h1 class="c-title__header"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
