@@ -20,6 +20,7 @@ function custom_theme_support() {
 }
 add_action( 'after_setup_theme', 'custom_theme_support' );  //必要な機能を設定し、after_setup_theme のアクションフックで実行
 
+
 // function ham_widgets_init() {     //ウィジェットの初期設定
 //   register_sidebar ( array (      //ウィジェットのボックス一つ一つを定義する
 //     'name'    =>  esc_html__( 'Category widget' ),
@@ -34,6 +35,19 @@ add_action( 'after_setup_theme', 'custom_theme_support' );  //必要な機能を
 // add_action( 'widget_init', 'ham_widgeta_init' );
 
 
+/* ressCSS、フォント2種、CSS、JavaScript読み込み（上から）*********************/
+function my_enqueue_styles() {
+  wp_enqueue_style( 'ress', '//unpkg.com/ress/dist/ress.min.css', array(), false, 'all' );
+  wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css2?family=Roboto&display=swap', array(), '' );
+  wp_enqueue_style( 'mplus', '//fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap', array(), '' );
+  wp_enqueue_style( 'style', get_theme_file_uri( '/css/style.css' ), array( 'ress' ), false, 'all' );
+  wp_deregister_script( 'jquery' );   //不要なjQueryを削除する
+  wp_enqueue_script( 'jquery', get_theme_file_uri( '/js/jquery-3.7.1.min.js' ), '', '', true );
+  wp_enqueue_script( 'js', get_theme_file_uri( '/js/nav.js' ), array( 'jquery' ), false, true );
+}
+add_action( 'wp_enqueue_scripts', 'my_enqueue_styles' );
+
+
 /* タイトル出力 ********************************/
 function ham_title ( $title ) {
   if ( is_front_page() && is_home() ) {   //トップページなら
@@ -45,16 +59,6 @@ function ham_title ( $title ) {
 }
 add_filter( 'pre_get_document_title', 'ham_title' );
 
-/* ressCSS、フォント2種、CSS、JavaScript読み込み（上から）*********************/
-function my_enqueue_styles() {
-  wp_enqueue_style( 'ress', '//unpkg.com/ress/dist/ress.min.css', array(), false, 'all' );
-  wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css2?family=Roboto&display=swap', array(), '' );
-  wp_enqueue_style( 'mplus', '//fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap', array(), '' );
-  wp_enqueue_style( 'style', get_theme_file_uri( 'style.css' ), array( 'ress' ), false, 'all' );
-  wp_deregister_script( 'jquery' );   //不要なjQueryを削除する
-  wp_enqueue_script( 'js', get_theme_file_uri( '/js/nav.js' ), array( 'jquery' ), false, true );
-}
-add_action( 'wp_enqueue_scripts', 'my_enqueue_styles' );
 
 /* 検索対象を投稿ページのみにする ****************/
 function search_filter( $query ) {
