@@ -11,7 +11,7 @@
       <section class="l-fv l-fv__bg">
         <div class="l-fv__content">
           <h2 class="c-title__archive">Menu</h2>
-          <p class="c-text-archive"><?php echo $catname; ?></p>
+          <p class="c-text__archive"><?php echo $catname; ?></p>
         </div>
       </section>
       <!-- p-theme　takeout/eatin -->

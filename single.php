@@ -2,15 +2,12 @@
 
 <?php get_sidebar(); ?>
 
-    <!-- main -->
     <main class="u-main__container">
-      <!-- p-fv　ファーストビュー -->
       <section class="l-fv l-fv__single">
         <div class="l-fv__content-single">
-          <h2 class="c-title__single"><?php the_title(); ?>チーズバーガー</h2>
+          <h2 class="c-title__single"><?php the_title(); ?></h2>
         </div>
       </section>
-    <!-- Single page -->
       <article>
         <?php
         if ( have_posts() ) :

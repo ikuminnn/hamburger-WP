@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -750,7 +749,7 @@ input {
   }
 }
 
-.c-text-archive {
+.c-text__archive {
   font-size: 1.6rem;
   position: absolute;
   top: 38px;
@@ -758,7 +757,7 @@ input {
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .c-text-archive {
+  .c-text__archive {
     font-size: 1.6rem;
     top: 5px;
     left: 240px;
