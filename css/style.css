@@ -60,7 +60,7 @@ ul, li {
 
 .l-fv {
   color: #fff;
-  background: url(/img/saittitle.jpg) center/cover no-repeat;
+  background: url(../img/saittitle.jpg) center/cover no-repeat;
   width: 100%;
 }
 .l-fv__content {
@@ -99,18 +99,18 @@ ul, li {
   display: none;
 }
 .l-fv__bg {
-  background: url(/img/takeout.jpg) left 50%/cover no-repeat;
+  background: url(../img/takeout.jpg) left 50%/cover no-repeat;
 }
 .l-fv__single {
-  background: url(/img/single-ham.jpg) left 70%/cover no-repeat;
+  background: url(../img/single-ham.jpg) left 70%/cover no-repeat;
 }
 .l-fv__about {
-  background: url(/img/about-shop.jpg) left 50%/cover no-repeat;
+  background: url(../img/about-shop.jpg) left 50%/cover no-repeat;
 }
 
 .l-footer {
   color: #fff;
-  background: url(/img/footer-back.png);
+  background: url(../img/footer-back.png);
   grid-column: 1/3;
   grid-row: 3;
 }
@@ -140,7 +140,7 @@ input {
   content: "";
   width: 25px;
   height: 25px;
-  background: url(/./img/icon.png) no-repeat center center/auto 100%;
+  background: url(../img/icon.png) no-repeat center center/auto 100%;
   display: inline-block;
   position: absolute;
   top: 8px;
@@ -189,11 +189,11 @@ input {
 }
 
 .takeout_bg {
-  background: url(/img/takeout.jpg) center/cover;
+  background: url(../img/takeout.jpg) center/cover;
 }
 
 .eatin_bg {
-  background: url(/img/eatin.jpg) center/cover;
+  background: url(../img/eatin.jpg) center/cover;
 }
 
 .c-pagenav__front {
@@ -938,7 +938,7 @@ input {
 }
 
 .access_bg {
-  background: url(/img/access.jpg) center/cover;
+  background: url(../img/access.jpg) center/cover;
 }
 
 .p-access {

@@ -2,7 +2,7 @@
 
 .l-fv {
   color: #fff;
-  background: url(/img/saittitle.jpg) center/cover no-repeat; // Front　背景
+  background: url(../img/saittitle.jpg) center/cover no-repeat; // Front　背景
   width: 100%;
   
   // アーカイブページ
@@ -38,14 +38,14 @@
 
   // Archive 背景
   &__bg {
-    background: url(/img/takeout.jpg) left 50%/cover no-repeat;
+    background: url(../img/takeout.jpg) left 50%/cover no-repeat;
   }
   // Single page背景
   &__single {
-    background: url(/img/single-ham.jpg) left 70%/cover no-repeat;
+    background: url(../img/single-ham.jpg) left 70%/cover no-repeat;
   }
   // About 背景
   &__about {
-    background: url(/img/about-shop.jpg) left 50%/cover no-repeat;
+    background: url(../img/about-shop.jpg) left 50%/cover no-repeat;
   }
 }

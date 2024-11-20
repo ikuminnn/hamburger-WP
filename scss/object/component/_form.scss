@@ -23,7 +23,7 @@ input {
       content: "";
       width: 25px;            //アイコンの横幅
       height: 25px;           //アイコンの高さ
-      background: url(/./img/icon.png) no-repeat center center / auto 100%; //背景にアイコン画像を設置
+      background: url(../img/icon.png) no-repeat center center / auto 100%; //背景にアイコン画像を設置
       display: inline-block;  //高さを持たせるためにインラインブロック
       position: absolute;     //親要素の相対位置に指定
       top: 8px;               //アイコンの位置微調整

@@ -11,7 +11,7 @@ function custom_theme_support() {
   add_theme_support( 'title-tag' );         // タイトルタグ
   add_theme_support( 'post-thumbnails' );   //アイキャッチ機能
   add_theme_support( 'menus' );             //カスタムメニュー
-  register_nav_menus( array (
+  register_nav_menus( array (               //ナビゲーションメニューの場所を登録
     'footer_nav'    =>  esc_html__( 'footer navigation', 'hamham' ),  //外観→メニューの所で編集できるように設定　フッター
     'category_nav'  =>  esc_html__( 'category navigation', 'hamham' ),  //カテゴリー
   ));
@@ -21,18 +21,18 @@ function custom_theme_support() {
 add_action( 'after_setup_theme', 'custom_theme_support' );  //必要な機能を設定し、after_setup_theme のアクションフックで実行
 
 
-// function ham_widgets_init() {     //ウィジェットの初期設定
-//   register_sidebar ( array (      //ウィジェットのボックス一つ一つを定義する
-//     'name'    =>  esc_html__( 'Category widget' ),
-//     'id'      =>  'category_widget',
-//     'description' =>  'widget for category',
-//     'before_widget' =>  '',
-//     'after_widget'  =>  '',
-//     'before_title'  =>  '<h2><i class="fa-regular fa-folder-open" aria-hidden="true"></i>',
-//     'after_title'   =>  "</h2>\n"
-//   ) );
-// }
-// add_action( 'widget_init', 'ham_widgeta_init' );
+function ham_widgets_init() {     //ウィジェットの初期設定
+  register_sidebar ( array (      //ウィジェットのボックス一つ一つを定義する
+    'name'          => 'Category widget',
+    'id'            => 'category_widget',
+    'description'   => 'widget for category',
+    'before_widget' => '<div class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2><i class="fa-regular fa-folder-open"></i>',
+    'after_title'   => "</h2>\n"
+  ) );
+}
+add_action( 'widgets_init', 'ham_widgets_init' );
 
 
 /* ressCSS、フォント2種、CSS、JavaScript読み込み（上から）*********************/
