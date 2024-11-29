@@ -12,6 +12,6 @@
           </figure>
       <?php endwhile;
       else: ?>
-        <p>表示する記事がありません</p>
+        <p>表示する記事がありません。</p>
     <?php endif; ?>
   </section>
