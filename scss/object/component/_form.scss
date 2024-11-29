@@ -19,7 +19,7 @@ input {
       width: 35.1%;
     }
     // 虫眼鏡のマーク
-    &::before {
+    &:before {
       content: "";
       width: 25px;            //アイコンの横幅
       height: 25px;           //アイコンの高さ
