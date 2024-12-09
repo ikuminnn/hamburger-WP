@@ -9,15 +9,16 @@
       <ul class="p-navi__content js-menu" aria-hidden="true">
         <?php
           if ( is_active_sidebar( 'category_widget' ) ): ?>
-          <ul class="c-navi">
+          <!-- <ul class="c-navi"> -->
             <?php dynamic_sidebar( 'category_widget' ); ?>
-          </ul>
+          <!-- </ul> -->
           <?php else: ?>
           <div class="widget">
             <h2>No Widget</h2>
             <p>ウィジェットは設定されていません。</p>
           </div>
         <?php endif; ?>
+
       </ul>
     </nav>
     <div class="p-navi-bg js-bg-black"></div>  <!--背景黒-->

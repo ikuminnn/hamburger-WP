@@ -279,11 +279,11 @@ input {
     font-weight: 700;
   }
 }
-.c-title__navi-ttl {
+.c-title .menu-item-type-taxonomy {
   margin-bottom: 20px;
   padding-left: 38px;
 }
-.c-title__navi-ttl h3 {
+.c-title .menu-item-type-taxonomy a {
   margin-bottom: 20px;
 }
 .c-title__main {
@@ -505,10 +505,10 @@ input {
   }
 }
 
-.c-navi {
+.sub-menu {
   padding-left: 20px;
 }
-.c-navi li {
+.sub-menu li {
   padding-bottom: 13px;
 }
 

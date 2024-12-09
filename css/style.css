@@ -136,7 +136,7 @@ input {
     width: 35.1%;
   }
 }
-.c-form__mark::before {
+.c-form__mark:before {
   content: "";
   width: 25px;
   height: 25px;
@@ -621,10 +621,10 @@ input {
   }
 }
 
-.c-navi {
+.sub-menu {
   padding-left: 20px;
 }
-.c-navi li {
+.sub-menu li {
   padding-bottom: 13px;
 }
 

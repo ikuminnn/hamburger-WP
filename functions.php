@@ -26,10 +26,6 @@ function ham_widgets_init() {     //ウィジェットの初期設定
     'name'          => 'Category widget',
     'id'            => 'category_widget',
     'description'   => 'widget for category',
-    'before_widget' => '<div class="widget %2$s">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h2><i class="fa-regular fa-folder-open"></i>',
-    'after_title'   => "</h2>\n"
   ) );
 }
 add_action( 'widgets_init', 'ham_widgets_init' );
@@ -121,6 +117,13 @@ function pagenation ( $pages = '', $range = 2 ) {
     echo "</ul>";
   }
 }
+
+// /* サムネイルを表示 */
+// function the_post_thumbnail_url( $size = 'post-thumbnail' ) {
+//   $thumb = get_the_post_thumbnail_url( null, $size );
+//   if ( $thumb ) {
+//     echo esc_url ( $thumb );
+//   }}
 
 ?>
 
