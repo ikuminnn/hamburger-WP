@@ -11,9 +11,11 @@ function custom_theme_support() {
   add_theme_support( 'title-tag' );         // タイトルタグ
   add_theme_support( 'post-thumbnails' );   //アイキャッチ機能
   add_theme_support( 'menus' );             //カスタムメニュー
-  register_nav_menus( array (               //ナビゲーションメニューの場所を登録
-    'footer_nav'    =>  esc_html__( 'footer navigation', 'hamham' ),  //外観→メニューの所で編集できるように設定　フッター
+  register_nav_menus( array (               //外観→メニュー で表示するメニュー
+    'footer_nav'    =>  esc_html__( 'footer navigation', 'hamham' ),  //フッター
     'category_nav'  =>  esc_html__( 'category navigation', 'hamham' ),  //カテゴリー
+    // メニューの位置を示す固有名称 => このメニューの位置の名称
+    'global-nav'    =>  'グローバルメニュー'
   ));
   add_theme_support( 'editor-styles' );     //エディタスタイル
   add_editor_style();
@@ -56,14 +58,14 @@ function ham_title ( $title ) {
 add_filter( 'pre_get_document_title', 'ham_title' );
 
 
-/* 検索対象を投稿ページのみにする ****************/
-function search_filter( $query ) {
-  if ( $query -> is_search ) {
-    $query -> set ( 'post_type', 'post' );
-  }
-  return $query;
-}
-add_filter( 'pre_get_posts', 'search_filter' );
+// /* 検索対象を投稿ページのみにする ****************/
+// function search_filter( $query ) {
+//   if ( $query -> is_search ) {
+//     $query -> set ( 'post_type', 'post' );
+//   }
+//   return $query;
+// }
+// add_filter( 'pre_get_posts', 'search_filter' );
 
 
 /* ページネーション ~~~~~~~~~~~~~~~~~~~
@@ -118,12 +120,6 @@ function pagenation ( $pages = '', $range = 2 ) {
   }
 }
 
-// /* サムネイルを表示 */
-// function the_post_thumbnail_url( $size = 'post-thumbnail' ) {
-//   $thumb = get_the_post_thumbnail_url( null, $size );
-//   if ( $thumb ) {
-//     echo esc_url ( $thumb );
-//   }}
 
 ?>
 

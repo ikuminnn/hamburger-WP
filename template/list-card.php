@@ -6,7 +6,7 @@
             <img class="img-list" src="<?php the_post_thumbnail_url( 'medium' ); ?>" alt="">
             <figcaption class="c-caption">
               <h3><?php the_title(); ?></h3>
-                <?php the_content( '続きを読む' ); ?></p>
+              <?php the_content( '続きを読む' ); ?>
               <p><a class="c-button__menu" href="<?php the_permalink(); ?>">詳しく見る</a></p>
             </figcaption>
           </figure>

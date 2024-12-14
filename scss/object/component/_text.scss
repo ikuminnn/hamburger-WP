@@ -16,6 +16,7 @@
   }
   &__theme {
     h2 {
+      margin-bottom: 30px;
       @include breakpoint(tablet) {
         font-size: 3.1rem;
       }

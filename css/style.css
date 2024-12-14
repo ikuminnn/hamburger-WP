@@ -395,13 +395,6 @@ input {
     font-weight: 700;
   }
 }
-.c-title__navi-ttl {
-  margin-bottom: 20px;
-  padding-left: 38px;
-}
-.c-title__navi-ttl h3 {
-  margin-bottom: 20px;
-}
 .c-title__main {
   position: absolute;
   top: 0px;
@@ -499,6 +492,17 @@ input {
   }
 }
 
+.menu-item-type-taxonomy {
+  margin-bottom: 20px;
+  padding-left: 38px;
+}
+.menu-item-type-taxonomy > a {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
 .c-list {
   background: rgba(255, 255, 255, 0.8);
   padding: 16px;
@@ -550,6 +554,9 @@ input {
     top: 5px;
     left: 240px;
   }
+}
+.c-text__theme h2 {
+  margin-bottom: 30px;
 }
 @media (min-width: 768px) {
   .c-text__theme h2 {

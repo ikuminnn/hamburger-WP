@@ -9,7 +9,7 @@
     <?php wp_head(); ?>
   </head>
   
-  <body <?php body_class(); ?> class="u-container">
+  <body <?php body_class( 'u-container' ); ?> >
     <header class="l-header">
       <h1 class="c-title__header"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
       <?php get_search_form(); ?>
