@@ -58,14 +58,14 @@ function ham_title ( $title ) {
 add_filter( 'pre_get_document_title', 'ham_title' );
 
 
-// /* 検索対象を投稿ページのみにする ****************/
-// function search_filter( $query ) {
-//   if ( $query -> is_search ) {
-//     $query -> set ( 'post_type', 'post' );
-//   }
-//   return $query;
-// }
-// add_filter( 'pre_get_posts', 'search_filter' );
+/* 検索対象を投稿ページのみにする ****************/
+function search_filter( $query ) {
+  if ( $query -> is_search ) {
+    $query -> set ( 'post_type', 'post' );
+  }
+  return $query;
+}
+add_filter( 'pre_get_posts', 'search_filter' );
 
 
 /* ページネーション ~~~~~~~~~~~~~~~~~~~

@@ -5,13 +5,13 @@
     <!-- main -->
     <main class="u-main__container">
       <?php
-        $cat = get_category();
+        $cat = get_category( 'parent' );
         $catname = $cat[ 0 ] -> cat_name;
         ?>
       <section class="l-fv l-fv__bg">
         <div class="l-fv__content">
           <h2 class="c-title__archive">Menu</h2>
-          <p class="c-text__archive"><?php echo $catname; ?></p>
+          <p class="c-text__archive"><?php the_archive_title(); ?></p>
         </div>
       </section>
       <!-- p-theme　takeout/eatin -->
@@ -23,7 +23,7 @@
                 <?php echo $catname; ?>の一覧を表示しています。
               </h2>
             </div>
-            <?php get_template_part( 'template/list-card' ); ?> //商品ごとのやつ
+            <?php get_template_part( 'template/list-card' ); ?>
           </article>
         <?php endwhile; ?>
 
