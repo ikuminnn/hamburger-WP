@@ -5,16 +5,16 @@
   display: block;
   position: relative;
   margin-left: 20px;
-  @include breakpoint(tablet) {
-    display: none;
-  }
-  & a::before {
-    content: "\0ab";
+  &::after {
+    content: "前へ";
     display: inline-block;
     position: absolute;
-    top: -12px;
-    left: 30px;
-    font-size: 2.7rem;
+    top: 0px;
+    left: 38px;
+    white-space: nowrap;
+    @include breakpoint(tablet) {
+      display: none;
+    }  
   }
 }
 .nextpostslink {
@@ -23,15 +23,18 @@
   margin-right: 20px;
   margin-left: auto;
   @include breakpoint(tablet) {
-    display: none;
+    margin-left: 0;
   }
-  & a::after {
-    content: "\0bb";
+  &::before {
+    content: "次へ";
     display: inline-block;
     position: absolute;
-    top: -12px;
-    right: 30px;
-    font-size: 2.7rem;
+    top: 0;
+    right: 38px;
+    white-space: nowrap;
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 }
 .c-pagenav__prev:before {   //タブレット以上のページ送り前へ矢印<<

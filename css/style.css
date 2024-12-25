@@ -201,18 +201,18 @@ input {
   position: relative;
   margin-left: 20px;
 }
-@media (min-width: 768px) {
-  .previouspostslink {
-    display: none;
-  }
-}
-.previouspostslink a::before {
-  content: "«";
+.previouspostslink::after {
+  content: "前へ";
   display: inline-block;
   position: absolute;
-  top: -12px;
-  left: 30px;
-  font-size: 2.7rem;
+  top: 0px;
+  left: 38px;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .previouspostslink::after {
+    display: none;
+  }
 }
 
 .nextpostslink {
@@ -223,16 +223,21 @@ input {
 }
 @media (min-width: 768px) {
   .nextpostslink {
-    display: none;
+    margin-left: 0;
   }
 }
-.nextpostslink a::after {
-  content: "»";
+.nextpostslink::before {
+  content: "次へ";
   display: inline-block;
   position: absolute;
-  top: -12px;
-  right: 30px;
-  font-size: 2.7rem;
+  top: 0;
+  right: 38px;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .nextpostslink::before {
+    display: none;
+  }
 }
 
 .c-pagenav__prev:before {
@@ -1020,7 +1025,9 @@ input {
   .wp-pagenavi {
     justify-content: center;
     align-items: center;
-    padding-bottom: 30px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    padding-bottom: 50px;
   }
 }
 @media (min-width: 1280px) {
@@ -1034,14 +1041,13 @@ input {
 @media (min-width: 768px) {
   .wp-pagenavi .pages {
     display: block;
-    padding-right: 30px;
   }
 }
-.wp-pagenavi .current, .wp-pagenavi a.page, .wp-pagenavi .extend, .wp-pagenavi .first, .wp-pagenavi .last {
+.wp-pagenavi .current, .wp-pagenavi a.page {
   display: none;
 }
 @media (min-width: 768px) {
-  .wp-pagenavi .current, .wp-pagenavi a.page, .wp-pagenavi .extend, .wp-pagenavi .first, .wp-pagenavi .last {
+  .wp-pagenavi .current, .wp-pagenavi a.page {
     display: flex;
     -moz-column-gap: 15px;
          column-gap: 15px;
@@ -1049,6 +1055,9 @@ input {
     border: solid 1.5px #707070;
     padding: 5px 10px;
   }
+}
+.wp-pagenavi .first, .wp-pagenavi .last {
+  display: none;
 }
 
 .p-navi {

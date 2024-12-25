@@ -8,7 +8,8 @@
   @include breakpoint(tablet) {
     justify-content: center;
     align-items: center;
-    padding-bottom: 30px;
+    column-gap: 20px;
+    padding-bottom: 50px;
   }
   @include breakpoint(pc) {
     padding-bottom: 60px;
@@ -17,10 +18,9 @@
     display: none;
     @include breakpoint(tablet) {
       display: block;
-      padding-right: 30px;
     }
   }
-  .current, a.page, .extend, .first, .last {  //1-9の数字ページ送り
+  .current, a.page {  //数字ページ送り
     display: none;
     @include breakpoint(tablet) {
       display: flex;
@@ -29,5 +29,8 @@
       border: solid 1.5px $color-font-70;
       padding: 5px 10px;
     }
+  }
+  .first, .last {
+    display: none;
   }
 }
