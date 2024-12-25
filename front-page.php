@@ -10,7 +10,7 @@
     <!-- p-theme　takeout/eatin -->
     <article class="p-theme">
       <div class="c-section takeout_bg">
-        <a href="/about.html">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>category/takeout">
         <h2 class="c-title c-title__main">Take Out</h2>
         <ul class="p-theme__lists">
           <li class="c-list">
@@ -24,7 +24,7 @@
         </ul></a>
       </div>
       <div class="c-section eatin_bg">
-        <a href="/about.html">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>category/eatin">
         <h2 class="c-title c-title__main">Eat In</h2>
         <ul class="p-theme__lists">
           <li class="c-list">

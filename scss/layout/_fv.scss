@@ -24,11 +24,14 @@
       opacity: 0.5;
     }
     &-single {
+      display: block;
+      background-size: cover;
+      background-position: left 50%;
       height: 200px;
       line-height: 200px;
       @include breakpoint(tablet) {
-        height: 500px;
-        line-height: 500px;
+        height: 300px;
+        line-height: 300px;
       }
       &::before {
         display: none;
@@ -41,11 +44,9 @@
     background: url(../img/takeout.jpg) left 50%/cover no-repeat;
   }
   // Single page背景
-  &__single {
-    background: url(../img/single-ham.jpg) left 70%/cover no-repeat;
-  }
+  &__single
   // About 背景
   &__about {
-    background: url(../img/about-shop.jpg) left 50%/cover no-repeat;
+    background-image: url(../img/about-shop.jpg);
   }
 }

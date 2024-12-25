@@ -1,6 +1,6 @@
 @use "../../foundation/variable" as *;
 
-.u-pagenav__list-border {
+.current {
   border: solid 1.5px $color-font-70;
   padding: 5px 10px;
   background-color: #3C2B1C;

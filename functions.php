@@ -67,58 +67,17 @@ function search_filter( $query ) {
 }
 add_filter( 'pre_get_posts', 'search_filter' );
 
-
-/* ページネーション ~~~~~~~~~~~~~~~~~~~
-* $pages  : 総ページ数
-* $paged  : 現在のページ
-* $range  : 左右に何ページ表示するか（レンジ：範囲）
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-function pagenation ( $pages = '', $range = 2 ) {
-  $showitems = ( $range * 1) + 1;    //表示するページ数（3ページ）
-  global $paged;            //現在のページ値
-  if ( empty ( $paged )) {  //デフォルトページ
-    $paged = 1;
+//  the_archive_title で表示される「：」の前の表記を削除
+add_filter( 'get_the_archive_title', function ( $title ) {
+  if ( is_category() ) {
+    $title = single_cat_title( '', false );
+  } elseif ( is_tag() ) {
+    $title = single_tag_title( '', false );
+  } elseif ( is_tax() ) {
+    $title = single_term_title( '', false );
   }
-
-  if ( $pages == '' ) {
-    global $wp_query;     //前ページ数を取得
-    $pages = $wp_query -> max_num_pages;    //ページが複数あるかチェックする値
-    if ( !$pages ) {      //取得できなければ1をセットする
-      $pages = 1;
-    }
-  }
-  //2ページ以上ある場合に表示する
-  if ( 1 != $pages ) {
-    echo "<div class=\"page-count\">" . $paged . "/" . $pages . "</div>";   //現在のページを表示「今のページ/総ページ」
-    echo "<ul class=\"pagenation\">";
-    if ( $paged > $pages + 1 ) {    //最初へ
-      echo "<li class=\"first\"><a href='" . get_pagenum_link( 1 ) . "'>最初へ</a></li>";
-    }
-    if ( $paged > 1 ) {             //前へ
-      echo "<li class=\"prev\"><a href='" . get_pagenum_link( $paged - 1 ) ."'>前へ</a></li>";
-    }
-
-    //ページ番号を表示
-    for ( $i = 1; $i <= $pages; $i++ ) {  //ループ処理 $iの1から始める;$iが総ページ以下の時は続ける;ループが来る度に$1に1を足す
-      if ( $i <= $paged + $range && $i >= $paged - $range ) {   //$iが、表示しているページと今のページ数以下、かつ、表示ページのうちの今のページ数以上のときはtrue
-        if ( $paged == $i ) {             //今のページ数が$iと等しいか
-          echo "<li class=\"current\">" . $i . "</li>";  //等しい時に表示
-        } else {
-          echo "<li><a href='".get_pagenum_link( $i ). "'>" . $i . "</a></li>"; //等しくない時に表示
-        }
-      }
-    }
-
-    if ( $paged < $pages ) {        //次へ＿今のページが総ページより小さい数字の時
-      echo "<li class=\"next\"><a href='" .get_pagenum_link( $paged + 1 ). "'>次へ</a></li>";
-    }
-    if ( $paged + $range < $pages ) { //最後へ＿今のページを含めた表示数が総ページより小さい時（最後のページに当たる数字が表示されていたら出ない？
-      echo "<li class=\"last\"><a href='" .get_pagenum_link( $pages ). "'>最後へ</a></li>";
-    }
-
-    echo "</ul>";
-  }
-}
+  return $title;
+});
 
 
 ?>

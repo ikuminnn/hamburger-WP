@@ -2,11 +2,20 @@
 @use "../../foundation/variable" as *;
 
 .c-inner {
-  padding: 0 15px;
+  padding: 30px 15px;
   @include breakpoint(tablet) {
-    padding: 0 46px;
+    padding: 30px 46px 100px;
   }
   @include breakpoint(pc) {
-    padding: 0 85px;
+    padding: 50px 85px 150px;
+  }
+  .wp-block-heading {
+    padding: 25px 0 15px;
+    @include breakpoint(tablet) {
+      padding: 45px 0 40px;
+    }
+  }
+  p {
+    margin-top: 20px;
   }
 }

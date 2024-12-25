@@ -18,8 +18,10 @@
     padding: 20px 20px 25px;
     display: flex;
     flex-direction: column;
+    row-gap: 50px;
     @include breakpoint(tablet) {
       padding: 30px 30px 58px;
+      row-gap: 50px;
     }
     @include breakpoint(pc) {
       padding: 48px 86px 100px;

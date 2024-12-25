@@ -16,11 +16,20 @@
           </h2>
         </div>
         <?php get_template_part( 'template/list-card' ); ?>
-        <?php
-          if ( function_exists( 'pagenation' ) ) {  //「pagenation」という関数が定義されていれば呼び出す
-            pagenation();
-          } ?>       <!-- 定義がなかったら呼び出さない -->
       </article>
+      <?php if( function_exists( 'wp_pagenavi' ) ) {  //ページネーション
+        wp_pagenavi();
+        } ?>
     </main>
 
 <?php get_footer(); ?>
+
+
+  <!-- $paged = get_query_var( 'paged' )? get_query_var( 'paged' ) : 1; //現在の送り番号を取得する
+  $info = new WP_Query( array(    //任意の変数＄ に取得してもらう
+    'post_type'     =>  'post', //投稿タイプ
+    'paged'         =>  $paged, //ページ番号を指定
+    'post_status'   =>  'publish',
+    'post_per_page' =>  5,  //表示する投稿数※管理画面の設定と違うとバグる
+  ));  array( 'query' => $info )  -->
+      
