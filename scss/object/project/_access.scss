@@ -41,7 +41,7 @@
       background: black;
       opacity: 0.5;
     }
-    // 手前の黒
+    // 重なる黒
     &::before {
       content: '';
       position: absolute;

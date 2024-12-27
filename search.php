@@ -23,13 +23,3 @@
     </main>
 
 <?php get_footer(); ?>
-
-
-  <!-- $paged = get_query_var( 'paged' )? get_query_var( 'paged' ) : 1; //現在の送り番号を取得する
-  $info = new WP_Query( array(    //任意の変数＄ に取得してもらう
-    'post_type'     =>  'post', //投稿タイプ
-    'paged'         =>  $paged, //ページ番号を指定
-    'post_status'   =>  'publish',
-    'post_per_page' =>  5,  //表示する投稿数※管理画面の設定と違うとバグる
-  ));  array( 'query' => $info )  -->
-      

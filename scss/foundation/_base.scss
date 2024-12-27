@@ -15,11 +15,11 @@ html {
 }
 
 body {
+  min-width: 320px;
   background-color: v.$color-base;
   width: 100%;
   font-size: 1.6rem;  // 16px
   font-family: "Roboto", "M PLUS 1p", sans-serif;
-  overflow-x: hidden;
 }
 
 a {

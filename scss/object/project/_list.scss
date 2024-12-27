@@ -27,4 +27,15 @@
       width: 50%;
     }
   }
+  .img-no {
+    width: 100%;
+    height: auto;
+    line-height: 100px;
+    background-color: rgba(249, 208, 93, 68%);
+    text-align: center;
+    font-size: 2rem;
+    @include breakpoint(tablet) {
+      width: 50%;
+    }
+  }
 }

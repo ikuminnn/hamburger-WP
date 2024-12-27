@@ -3,10 +3,6 @@
 <?php get_sidebar(); ?>
 
     <main class="u-main__container">
-      <!-- <?php
-        $cat = get_the_category();
-        $cat_name = $cat[ 0 ]->cat_name;
-        ?> -->
       <section class="l-fv l-fv__bg">
         <div class="l-fv__content">
           <h2 class="c-title__archive">Menu</h2>

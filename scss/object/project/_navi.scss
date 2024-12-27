@@ -3,16 +3,14 @@
 
 .p-navi {
   position: fixed;
-  right: -100%;
-/*　ハンバーガーボタンがクリックされる前はWindows右側に隠す*/
+  right: -100%;   /*　ハンバーガーボタンがクリックされる前はWindows右側に隠す*/
   top: 0;
-  width: 87%;
-  /* 出てくるスライドメニューの幅*/
+  width: 87%;     /* 出てくるスライドメニューの幅*/
   height: 100%;
   background-color: $color-sidebar-bg;
   transition: all 0.6s;
   z-index: 200;
-  overflow-y: auto; /* メニューが多くなったらスクロールできるように*/
+  overflow-y: scroll;
   scrollbar-width: none;
   @include breakpoint(tablet){
     width: 44%;
