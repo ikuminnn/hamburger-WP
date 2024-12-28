@@ -12,8 +12,7 @@ function custom_theme_support() {
   add_theme_support( 'post-thumbnails' );   //アイキャッチ機能
   add_theme_support( 'menus' );             //カスタムメニュー
   register_nav_menus( array (               //外観→メニュー で表示するメニュー
-    'footer_nav'    =>  esc_html__( 'footer navigation', 'hamham' ),  //フッター
-    'category_nav'  =>  esc_html__( 'category navigation', 'hamham' ),  //カテゴリー
+    'footer_nav'    =>  esc_html__( 'footer navigation', 'フッターナビ' ),  //フッター
     // メニューの位置を示す固有名称 => このメニューの位置の名称
     'global-nav'    =>  'グローバルメニュー'
   ));
@@ -79,6 +78,14 @@ add_filter( 'get_the_archive_title', function ( $title ) {
   return $title;
 });
 
+// wp_nav_menuの <li>にクラスを追加する
+function add_class_on_li( $classes, $item, $args ) {
+  if ( isset( $args -> li_class ) ) {
+    $classes[] = $args -> li_class;
+  }
+  return $classes;
+}
+add_filter( 'nav_menu_css_class', 'add_class_on_li', 1, 3 );
 
 ?>
 

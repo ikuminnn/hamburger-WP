@@ -17,18 +17,10 @@
     gap: 15px;
     padding: 30px 0 20px;
   }
-  span {
-    margin-left: 18px;
-    position: relative;
-  }
-  span::before {
-    content: "";
-    display: inline-block;
-    width: 1.5px;
-    height: 19px;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: -8px;
-  }
+}
+
+.p-footer__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

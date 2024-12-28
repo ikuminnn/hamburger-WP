@@ -1,13 +1,10 @@
 <?php get_header(); ?>
 
 <?php get_sidebar(); ?>
-  <!-- main -->
   <main class="u-main__container">
-    <!-- p-fv　ファーストビュー -->
     <section class="l-fv">
       <h2 class="c-title__fv">ダミーサイト</h2>
     </section>
-    <!-- p-theme　takeout/eatin -->
     <article class="p-theme">
       <div class="c-section takeout_bg">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>category/takeout">
@@ -38,7 +35,6 @@
         </ul></a>
       </div>
     </article>
-    <!-- p-access 地図 -->
     <section class="p-access">
       <div class="p-access__content access_bg">
         <h2 class="c-title c-title__access">見出しが入ります</h2>
@@ -47,5 +43,4 @@
     </section>
   </main>
 
-  <!-- footer -->
 <?php get_footer(); ?>
