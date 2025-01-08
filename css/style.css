@@ -104,7 +104,7 @@ ul, li {
 .l-fv__bg {
   background: url(../img/takeout.jpg) left 50%/cover no-repeat;
 }
-.l-fv__single .l-fv__about {
+.l-fv__about {
   background-image: url(../img/about-shop.jpg);
 }
 
@@ -1187,31 +1187,16 @@ input {
 @media (min-width: 768px) {
   .p-list {
     display: flex;
-    width: 100%;
   }
 }
 .p-list img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  aspect-ratio: 4/3;
 }
 @media (min-width: 768px) {
   .p-list img {
-    width: 50%;
-  }
-}
-.p-list .img-no {
-  width: 100%;
-  height: auto;
-  line-height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-color: rgba(249, 208, 93, 0.68);
-  text-align: center;
-  font-size: 2rem;
-}
-@media (min-width: 768px) {
-  .p-list .img-no {
     width: 50%;
   }
 }

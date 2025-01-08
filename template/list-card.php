@@ -6,7 +6,7 @@
             <?php if ( has_post_thumbnail() ) : ?>  <!--アイキャッチ画像が登録されているか確認-->
               <img src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="">
             <?php else: ?> <!--サムネイルが登録されていなかったら-->
-              <div class="img-no">NoImage!</div>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.jpg" alt="noimage">
             <?php endif; ?>
             <figcaption class="c-caption">
               <h3><?php the_title(); ?></h3>

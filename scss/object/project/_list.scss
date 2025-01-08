@@ -18,23 +18,11 @@
   background-color: $color-brown;
   @include breakpoint(tablet) {
     display: flex;
-    width: 100%;
   }
   img {
     width: 100%;
     object-fit: cover;
-    @include breakpoint(tablet) {
-      width: 50%;
-    }
-  }
-  .img-no {
-    width: 100%;
-    height: auto;
-    line-height: 100px;
-    object-fit: cover;
-    background-color: rgba(249, 208, 93, 68%);
-    text-align: center;
-    font-size: 2rem;
+    aspect-ratio: 4/3;
     @include breakpoint(tablet) {
       width: 50%;
     }
