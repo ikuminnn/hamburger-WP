@@ -13,6 +13,7 @@
         while ( have_posts() ) : the_post(); ?>
           <div <?php post_class( 'c-inner' ); ?> >
             <?php the_content(); ?>
+            <?php wp_link_pages(); ?>
           </div>
         <?php endwhile; ?>
     </article>

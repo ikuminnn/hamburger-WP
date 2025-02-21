@@ -14,6 +14,7 @@
             <h2>
               「<?php the_archive_title(); ?>」の一覧を表示しています。
             </h2>
+            <p>詳細をご覧になりたい方は「詳しく見る」ボタンを押してください。</p>
           </div>
           <?php get_template_part( 'template/list-card' ); ?>
         </article>
