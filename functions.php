@@ -18,6 +18,8 @@ function custom_theme_support() {
   ));
   add_theme_support( 'editor-styles' );     //エディタスタイル
   add_editor_style();
+
+  add_theme_support( "wp-block-styles" );
 }
 add_action( 'after_setup_theme', 'custom_theme_support' );  //必要な機能を設定し、after_setup_theme のアクションフックで実行
 
