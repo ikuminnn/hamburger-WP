@@ -19,12 +19,12 @@ window.onload = function () {
 }
 
 // ハンバーガーメニューを開いている時はbodyページ固定
-$( function() {
+function hammenu() {
   $( ".js-btn" ).click ( function () {  //ハンバーガーメニューボタンがクリックされた時のイベントハンドラ設定
-    if ($( "body" ).css( "overflow" ) === "hidden" ) {  //bodyタグのoverflowスタイルを確認
-      $( "body" ).css( { height: "", overflow: "" });   //もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+    if ( $ ( ".u-container" ).css( "overflow" ) === "hidden" ) {  //bodyタグのoverflowスタイルを確認
+      $( ".u-container" ).css( { height: "", overflow: "" });   //もしoverflowがhiddenなら、bodyのスタイルを元に戻す
     } else {
-      $( "body" ).css ( { height: "100%", overflow: "hidden" });  //そうでなければ、bodyにheight:100%とoverflow:hiddenを設定し、スクロール無効にする
+      $( ".u-container" ).css ( { height: "100%", overflow: "hidden" });  //そうでなければ、bodyにheight:100%とoverflow:hiddenを設定し、スクロール無効にする
     }
   });
-});
+};
