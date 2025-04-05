@@ -38,7 +38,7 @@ function my_enqueue_styles() {
   wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css2?family=Roboto&display=swap', array(), '' );
   wp_enqueue_style( 'mplus', '//fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap', array(), '' );
   wp_enqueue_style( 'style', get_theme_file_uri( '/css/style.css' ), array( 'ress' ), false, 'all' );
-  // wp_deregister_script( 'jquery' );   //不要なjQueryを削除する
+  // wp_deregister_script( 'jquery' );  不要なjQueryを削除する
   wp_enqueue_script( 'jquery', get_template_directory_uri().'/js/jquery-3.7.1.min.js', array( 'jquery' ), '', true );
   wp_enqueue_script( 'js', get_template_directory_uri().'/js/nav.js', array( 'jquery' ), '', true );
 }
