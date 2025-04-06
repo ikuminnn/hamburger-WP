@@ -18,4 +18,5 @@
       else: ?>
         <p>表示する記事がありません。</p>
     <?php endif; ?>
+    <?php the_tags(); ?>
   </section>

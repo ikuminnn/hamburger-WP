@@ -30,3 +30,39 @@ a {
 ul, li {
   list-style: none;
 }
+
+.wp-caption { //画像とキャプションを挿入した投稿で、画像とキャプションテキストをくくるdivタグに付与されるクラス
+  color: #666;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-bottom: 10px;
+  max-width: 100%;
+  &-text {
+    margin: 5px 0;
+  }
+}
+.sticky {   //先頭に固定表示している投稿に付与されるクラス
+  position: relative;
+}
+.gallery-caption {  //投稿に「gallery」ショートコードを用いて表示したギャラリーに付与されるクラス
+  font-size: 1.3rem;
+}
+.bypostauthor { //コメント欄で管理人のコメントに付与するクラス
+  border: 1px solid #333;
+  padding: 2px;
+}
+.alignleft {    //投稿に挿入する画像の「配置（左、右、中央）」に付与されるクラス
+  display: inline;
+  float: left;
+  margin-right: 10px;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 10px;
+}
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
