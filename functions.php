@@ -18,19 +18,10 @@ function custom_theme_support() {
   ));
   add_theme_support( 'editor-styles' );     //エディタスタイル
   add_editor_style();
+  add_theme_support( 'automatic-feed-links' );
+  add_theme_support( "wp-block-styles" );
 }
 add_action( 'after_setup_theme', 'custom_theme_support' );  //必要な機能を設定し、after_setup_theme のアクションフックで実行
-
-
-// function ham_widgets_init() {     //ウィジェットの初期設定
-//   register_sidebar ( array (      //ウィジェットのボックス一つ一つを定義する
-//     'name'          => 'Category widget',
-//     'id'            => 'category_widget',
-//     'description'   => 'widget for category',
-//   ) );
-// }
-// add_action( 'widgets_init', 'ham_widgets_init' );
-
 
 /* ressCSS、フォント2種、CSS、JavaScript読み込み（上から）*********************/
 function my_enqueue_styles() {
@@ -87,6 +78,8 @@ function add_class_on_li( $classes, $item, $args ) {
 }
 add_filter( 'nav_menu_css_class', 'add_class_on_li', 1, 3 );
 
+
+//ブロックパターンの登録
 
 ?>
 
