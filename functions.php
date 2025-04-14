@@ -79,7 +79,29 @@ function add_class_on_li( $classes, $item, $args ) {
 add_filter( 'nav_menu_css_class', 'add_class_on_li', 1, 3 );
 
 
-//ブロックパターンの登録
+//ブロックパターン
+function mytheme_enqueue_styles() {
+  wp_enqueue_style(
+      'mytheme-block-style-styles', // ハンドル名
+      get_template_directory_uri() . '/css/block-style.css', // ファイルのパス
+      array(), // 依存関係（必要に応じて記入）
+      filemtime(get_template_directory() . '/css/block-style.css') // キャッシュ防止のためのバージョン指定
+  );
+}
+add_action('admin_enqueue_scripts', 'mytheme_enqueue_styles');
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');
+
+function mytheme_register_block_styles() {
+  // ボタンブロックのカスタムスタイル
+  register_block_style(
+      'core/button', // 対象ブロック
+      array(
+          'name'  => 'fancy-button', // スタイル名
+          'label' => __( '角丸ボタン', 'mytheme' ), // 表示名
+      )
+  );
+}
+add_action( 'init', 'mytheme_register_block_styles' );
 
 ?>
 
